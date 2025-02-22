@@ -115,6 +115,70 @@
       .card p {
         font-size: 14px;
       }
+
+      .part-3 {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 30px;
+      }
+
+      .part-3 .text-section {
+        max-width: 50%;
+      }
+
+      .part-3 h2 {
+        font-size: 28px;
+        color: #ba9f77;
+      }
+
+      .part-3 p {
+        font-size: 14px;
+        margin-top: 12px;
+      }
+
+      .form-container {
+        padding: 20px;
+        border: 1px solid #ba9f77;
+        max-width: 350px;
+        width: 100%;
+      }
+
+      .form-container h3 {
+        text-align: center;
+        font-size: 12px;
+        color: #ba9f77;
+      }
+
+      .form-group {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+
+      .form-group input {
+        outline: none;
+        font-size: 16px;
+        width: 45%;
+      }
+
+      .form-container button {
+        display: flex;
+        margin: 0 auto;
+        background-color: #ba9f77;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 9999px;
+        font-size: 12px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+
+      .form-container button:hover {
+        background: #cfb286;
+        transform: scale(1.1);
+      }
     </style>
   </head>
   <body>
@@ -238,7 +302,29 @@
           </div>
         </div>
       </section>
-      <section class="part-3"></section>
+
+      <section class="part-3">
+        <div class="text-section">
+          <h2>Secure your spot for the next phase</h2>
+          <p>
+            Secure your investment today and be part of an extraordinary legacy
+            of sustainable luxury in Port Douglas. For more information and to
+            schedule a site visit, please contact cairns@allarohomes.com.au
+          </p>
+        </div>
+        <div class="form-container">
+          <h3>JOIN THE PRIORITY LIST TODAY</h3>
+          <div class="form-group">
+            <input type="text" placeholder="First Name" />
+            <input type="text" placeholder="Last Name" />
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Mobile Nunber" />
+            <input type="text" placeholder="Email" />
+          </div>
+          <button>SECURE MY SPACE</button>
+        </div>
+      </section>
     </div>
   </body>
   <script>
