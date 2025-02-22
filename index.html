@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kata</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <style>
       @font-face {
         font-family: "Adobe Garamond";
@@ -19,9 +26,10 @@
       }
 
       body {
-        font-family: Adobe Garamond, system-ui, sans-serif;
+        font-family: "Work Sans", serif;
         margin: 0;
         padding: 2rem;
+        background: #f5f5f5;
       }
 
       .container {
@@ -45,7 +53,7 @@
       }
 
       .sidebar button {
-        font-family: Adobe Garamond, system-ui, sans-serif;
+        font-family: "Josefin Sans", serif;
         background: #f2edea;
         color: #ba9f77;
         border: none;
@@ -59,12 +67,13 @@
       }
 
       .content {
-        font-size: 14px;
+        font-size: 12px;
         border: 1px solid #ba9f77;
         padding: 20px;
       }
 
       .content h2 {
+        font-family: "Josefin Sans", serif;
         color: #ba9f77;
         margin-bottom: 8px;
       }
@@ -73,21 +82,22 @@
         display: flex;
         flex-direction: column;
         background: #f2edea;
+        padding: 30px;
       }
 
       .header-section {
-        padding: 15px 15px 0 15px;
+        padding: 15px;
       }
 
       .header-section h1 {
+        font-family: "Adobe Garamond", serif;
         font-size: 32px;
         color: #ba9f77;
         margin-bottom: 10px;
       }
 
       .header-section p {
-        font-size: 16px;
-        line-height: 1.6;
+        font-size: 12px;
       }
 
       .cards-container {
@@ -100,8 +110,8 @@
       }
 
       .card {
-        width: 200px;
-        height: 150px;
+        width: 230px;
+        height: 180px;
         background: #ba9f77;
         padding: 20px;
         flex-shrink: 0;
@@ -109,11 +119,12 @@
       }
 
       .card h3 {
+        font-size: 16px;
         margin-bottom: 12px;
       }
 
       .card p {
-        font-size: 14px;
+        font-size: 12px;
       }
 
       .part-3 {
@@ -128,16 +139,19 @@
       }
 
       .part-3 h2 {
-        font-size: 28px;
+        font-family: "Adobe Garamond", serif;
+        font-size: 32px;
         color: #ba9f77;
       }
 
       .part-3 p {
-        font-size: 14px;
+        font-size: 12px;
         margin-top: 12px;
       }
 
       .form-container {
+        background: #fff;
+        font-family: "Josefin Sans", serif;
         padding: 20px;
         border: 1px solid #ba9f77;
         max-width: 350px;
@@ -148,21 +162,26 @@
         text-align: center;
         font-size: 12px;
         color: #ba9f77;
+        padding-bottom: 30px;
       }
 
       .form-group {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 10px;
+        padding-bottom: 20px;
       }
 
       .form-group input {
-        outline: none;
-        font-size: 16px;
         width: 45%;
+        padding: 10px 0;
+        border: none;
+        border-bottom: 2px solid #ddd;
+        font-size: 12px;
+        outline: none;
       }
 
       .form-container button {
+        font-family: "Josefin Sans", serif;
         display: flex;
         margin: 0 auto;
         background-color: #ba9f77;
@@ -178,6 +197,31 @@
       .form-container button:hover {
         background: #cfb286;
         transform: scale(1.1);
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 1rem;
+        }
+
+        .part-1 {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .part-3 {
+          display: flex;
+          flex-direction: column;
+          padding: 0;
+        }
+
+        .part-3 .text-section {
+          max-width: 100%;
+        }
+
+        .form-container {
+          margin: 0 auto;
+        }
       }
     </style>
   </head>
