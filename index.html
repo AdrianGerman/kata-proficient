@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kata</title>
+    <style>
+      @font-face {
+        font-family: "Adobe Garamond";
+        src: url("fonts/Adobe_Garamond_Pro_Bold.ttf") format("truetype");
+        font-style: normal;
+        font-weight: normal;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Adobe Garamond, system-ui, sans-serif;
+        margin: 0;
+        padding: 2rem;
+      }
+
+      .container {
+        display: flex;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .part-1 {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 1rem;
+      }
+
+      .sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .sidebar button {
+        font-family: Adobe Garamond, system-ui, sans-serif;
+        background: #f2edea;
+        color: #ba9f77;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      .sidebar button.active {
+        background: #ba9f77;
+        color: white;
+      }
+
+      .content {
+        font-size: 14px;
+        border: 1px solid #ba9f77;
+        padding: 20px;
+      }
+
+      .content h2 {
+        color: #ba9f77;
+        margin-bottom: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <section class="part-1">
+        <div class="sidebar">
+          <button class="tab-btn active" data-target="benefits">
+            Benefits of Investing in Australian Property
+          </button>
+          <button class="tab-btn" data-target="streams">
+            Investment streams for Australian Citizenship
+          </button>
+          <button class="tab-btn" data-target="port">
+            Why Invest in Port Douglas
+          </button>
+          <button class="tab-btn" data-target="citizenship">
+            Australian Citizenship Benefits by Investment
+          </button>
+        </div>
+        <div class="content">
+          <div class="tab-content" id="benefits">
+            <h2>Benefits of Investing in Australian Property</h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi
+              similique voluptatum facilis dolorem? Ut, ea. Qui iure officia
+              possimus obcaecati minima non similique dolor temporibus, quo,
+              nostrum exercitationem amet velit.
+            </p>
+          </div>
+          <div class="tab-content" id="streams" style="display: none">
+            <h2>Investment streams for Australian Citizenship</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+              at temporibus quia explicabo adipisci voluptatum esse
+              consequuntur, sint odit debitis nostrum excepturi quidem dicta
+              aperiam dolor veniam? Eius, molestias consequatur.
+            </p>
+          </div>
+          <div class="tab-content" id="port" style="display: none">
+            <h2>Why Invest in Port Douglas</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quae
+              natus quos id eaque quasi. Adipisci unde, maxime eaque ab numquam
+              mollitia quaerat qui, in tempore ratione maiores dolor natus.
+            </p>
+          </div>
+          <div class="tab-content" id="citizenship" style="display: none">
+            <h2>Australian Citizenship Benefits by Investment</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis
+              ducimus magnam iure repellat doloremque perferendis temporibus
+              neque similique dolore, dignissimos sit ipsum expedita, quas
+              sequi? Vitae qui ad pariatur vel.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="part-2"></section>
+      <section class="part-3"></section>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const tabs = document.querySelectorAll(".tab-btn")
+      const contents = document.querySelectorAll(".tab-content")
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          tabs.forEach((btn) => btn.classList.remove("active"))
+          contents.forEach((content) => (content.style.display = "none"))
+
+          tab.classList.add("active")
+          const target = document.getElementById(
+            tab.getAttribute("data-target")
+          )
+          target.style.display = "block"
+        })
+      })
+    })
+  </script>
+</html>
